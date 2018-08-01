@@ -1,5 +1,8 @@
-from dmock.generators.uri.generator import generate
+from dmock.generators.uri.generator import PureRandomUri, UriGenerator
 
 
 def test_uri_generator():
-    print(generate())
+    strategy = PureRandomUri()
+    generator = UriGenerator(strategy)
+
+    print(generator())
